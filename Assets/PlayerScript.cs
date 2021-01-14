@@ -40,6 +40,12 @@ public class PlayerScript: MonoBehaviour
             GetComponent<AudioSource>().Play();
             Destroy(collision.gameObject);
         }
+        if (collision.gameObject.name.Equals("Door1Trigger"))
+        {
+            Destroy(collision.gameObject);
+            Destroy(GameObject.FindGameObjectWithTag("WASD"));
+        }
+
     }
     void Start()
     {
